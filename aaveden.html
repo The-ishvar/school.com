@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>प्रवेश आवेदन फॉर्म</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+        }
+
+        .form-box {
+            /* width: 600px; */
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .col {
+            width: 50%;
+        }
+
+        label {
+            /* font-size: 14px; */
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+       
+
+        button {
+            background: #1e40af;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h2>छात्र विवरण</h2>
+
+        <form>
+
+            <div class="row">
+                <div class="col">
+                    <label for="name">छात्र का नाम *</label>
+                    <input id="name" type="text" placeholder="छात्र का पूरा नाम" required>
+                </div>
+
+                <div class="col">
+                    <label for="date">जन्म तिथि *</label>
+                    <input id="date" type="date" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="fath-name">पिता का नाम *</label>
+                    <input id="fath-name type="text" placeholder="पिता का नाम" required>
+                </div>
+
+                <div class="col">
+                    <label for="mot-name">माता का नाम *</label>
+                    <input id="mot-name" type="text" placeholder="माता का नाम">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label>लिंग *</label>
+                    <select>
+                        <option>चुनें</option>
+                        <option>पुरुष</option>
+                        <option>महिला</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <label>प्रवेश हेतु कक्षा *</label>
+                    <select>
+                        <option>कक्षा चुनें</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label>मोबाइल नंबर *</label>
+                    <input type="number" placeholder="10 अंकों का मोबाइल नंबर">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" style="width:100%;">
+                    <label>पता *</label>
+                    <textarea placeholder="पूरा पता लिखें"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" style="width:100%;">
+                    <label>पिछला विद्यालय (यदि कोई हो)</label>
+                    <input type="text" placeholder="पिछले विद्यालय का नाम">
+                </div>
+            </div>
+
+            <button>आवेदन जमा करें</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

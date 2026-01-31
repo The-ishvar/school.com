@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.836);
+      line-height: 29px;
+    }
+
+    .mainConter {
+      flex: 1;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      /* background: linear-gradient(135deg, #ffffff, #ffffff); */
+    }
+
+    main {
+      background-color: #edececbf;
+    }
+
+    header {
+      height: 22vh;
+      background: linear-gradient(135deg, rgba(5, 41, 29, 0.299), #367761, #0f3d2e);
+      border: none;
+      border-bottom: 3px solid white;
+
+    }
+
+    header nav {
+      position: fixed;
+      top: 30px;
+      width: 90%;
+      background-color: rgba(255, 255, 255, 0.308);
+      margin: 20px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 30px;
+      border: 2px solid black;
+    }
+
+    header h2 {
+      text-align: center;
+    }
+
+
+
+    header nav a {
+      padding: 10px;
+      margin-bottom: 5px;
+      color: rgb(0, 0, 0);
+      border-bottom: 2px solid rgb(255, 255, 255);
+    }
+
+    nav img {
+      width: 10%;
+    }
+
+    .svg {
+      display: flex;
+      justify-content: end;
+      padding: 10px;
+    }
+
+    .svg img {
+      width: 34px;
+    }
+
+    header nav a:hover {
+      background-color: #4f88c2;
+      border-radius: 20px;
+    }
+
+    .admi{
+      margin-left: 40px;
+      padding: 10px ;
+      background-color: #b1bdb9;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .admi:hover{
+       background-color: #818785;
+    }
+
+    .opening {
+      height: 5vh;
+      background: linear-gradient(135deg, rgba(5, 41, 29, 0.299), #ffffff, #0f3d2e);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border: none;
+      border-bottom: 2px soild rgb(255, 255, 255);
+      padding: 20px;
+    }
+
+    .opening a {
+      border-bottom: 2px solid;
+    }
+
+
+    .mainConter {
+      width: 100%;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #123e3d00;
+    }
+
+    .introDiv {
+      width: 98%;
+      padding-bottom: 20px;
+      margin-top: 1px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 5px 5px 5px 5px rgba(166, 162, 162, 0.367);
+    }
+
+    .introDiv p {
+      line-height: 29px;
+      padding: 4px 10px;
+    }
+
+    .introDiv img {
+      margin-top: 10px;
+      box-shadow: 5px 1px 3px;
+      max-width: 100%;
+      border-radius: 40px;
+      max-height: 400px;
+    }
+
+    #noticeList{
+      /* background-color: aqua; */
+      margin-bottom: 10px;
+    }
+    .notice {
+      /* background: #585e5f79; */
+      background-color: #dae6e6;
+      margin: 20px;
+      width: 90%;
+      padding: 15px;
+      border-radius: 10px;
+      border-bottom: 3px solid #000000;
+    }
+
+    .notice a{
+      background-color: rgb(188, 194, 192);
+      padding: 11px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border-bottom: 2px solid black;
+      box-shadow: 1px 2px 5px 0px;
+    }
+
+    .notice:hover {
+      border: 3px solid rgb(19, 24, 79);
+    }
+
+    .notice p {
+      padding: 10px;
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .c-but {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+
+    .St-number {
+      background-color: #dae6e6;
+      width: 40%;
+      height: 90px;
+      margin: 5px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* justify-content: center; */
+    }
+
+    .St-number {
+      padding-top: 10px;
+      box-shadow: 5px 5px 5px;
+      border-bottom: 2px solid rgb(5, 255, 238);
+    }
+
+    .toperStudent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* column-gap: 0px; */
+    }
+
+
+    .student img {
+      border-radius: 20px;
+      box-sizing: border-box;
+      width: 100%;
+
+    }
+
+
+    .student {
+      width: 46%;
+      margin: 5px;
+      text-align: center;
+      margin-bottom: 40px;
+      border-radius: 20px;
+      background: #585e5f79;
+      border-bottom: 2px solid rgb(255, 255, 255);
+    }
+
+    .teachers2 p {
+      font-size: 15px;
+      padding: 5px;
+    }
+
+    .timetable {
+      padding: 25px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      padding: 8px;
+      border-bottom: 2px solid #3b3939;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 10px;
+      background: #27ae60;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    footer {
+      padding: 10px;
+      width: 100%;
+      height: 200px;
+      background-color: rgb(227, 233, 233);
+    }
+
+    footer nav {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+
+    }
+
+    footer nav a {
+      padding: 10px;
+      background-color: #c8d2cf;
+      border-radius: 10px;
+      margin: 3px;
+
+    }
+
+    footer nav a:hover {
+      background-color: #9a9f9e;
+    }
+
+    .sp {
+      text-align: center;
+      font-size: 13px;
+    }
+
+
+    @media (min-width:800px) {
+
+      .int-img {
+        width: 50%;
+
+      }
+
+      .introDiv {
+        display: flex;
+        flex-direction: row;
+
+      }
+
+      .int-text {
+        padding: 10px;
+      }
+
+      .toperStudent {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .student {
+        padding: 0px 0px;
+        width: 20%;
+      }
+
+      .student img {
+        /* width: 20%; */
+        max-height: 300px;
+      }
+
+      .notice{
+        width: 40%;
+      }
+
+      .big-notice{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+    }
+  </style>
+
+
+  <script>
+    function ShowButton() {
+      let show = document.getElementById('nav');
+      nav.style.display = 'flex';
+
+    }
+
+    function Show() {
+      let show = document.getElementById('nav');
+      nav.style.display = 'none';
+
+    }
+
+
+
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <dvi class="svg">
+      <img id="opensvg" onclick="ShowButton()" src="align-justify-svgrepo-com.svg" alt="">
+    </dvi>
+    <h2>G.S.S school Bhaleri </h2>
+
+    <p class="sp">प्रवेश के लिए आज ही आवेदन करें
+
+    
+        
+    <nav id="nav">
+      <a href="#">Home</a>
+      <a href="#Teachers">Teachers</a>
+      <a href="#noticeList">Notice</a>
+      <a href="#">Contact</a>
+      <img onclick="Show()" src="asterisk-svgrepo-com.svg" alt="">
+
+    </nav>
+  </header>
+  <div class="opening">
+    <a href="#toperStudent">Top Student</a>
+    <a href="#time">Time </a>
+    <a href="aaveden.html">Admission Application</a>
+    <a href="#te">Teacher</a>
+    
+  </div>
+
+  <main>
+    <div class="mainConter">
+
+      <div class="introDiv">
+        <div class="int-img">
+          <img src="WhatsApp Image 2026-01-30 at 8.48.37 AM.jpeg" alt="School img">
+        </div>
+        <div class="int-text">
+
+          <p>हमारा विद्यालय चूरू जिले के भालेरी गाँव में, चूरू रोड पर स्थित है। यहाँ कक्षा 1 से 12 तक की शिक्षा दी जाती
+            है।
+          </p>
+
+          <p>विद्यालय में विज्ञान वर्ग में गणित और जीवविज्ञान तथा कला वर्ग में राजनीति शास्त्र पढ़ाया जाता है।</p>
+
+          <p>यहाँ 22 शिक्षक कार्यरत हैं और लगभग 420 छात्र अध्ययनरत हैं। विद्यालय का शैक्षणिक परिणाम 92% है।</p>
+
+        </p><a href="aaveden.html" class="admi">Admission Application</a>
+        </div>
+      </div>
+
+      <div class="notice " id="te">
+        <h3>📢 Notice Board</h3>
+        <ul id="noticeList">
+          <li>सभी छात्रों को सूचित किया जाता है कि रविवार को विद्यालय बंद रहेगा।
+
+          </li>
+          <li>कक्षा 1 में प्रवेश प्रारंभ हो चुके हैं। इच्छुक अभिभावक कार्यालय से संपर्क करें।</li>
+          <li>सभी छात्रों को विद्यालय की साफ-सफाई का ध्यान रखने का निर्देश दिया जाता है।</li>
+        </ul>
+        
+        <a href="aaveden.html">Admission Application</a>
+      </div>
+
+
+      <div class="c-but">
+
+        <div class="St-number">
+          <h3>विद्यार्थी</h3>
+          <p>430</p>
+        </div>
+
+
+        <a href="tearch.html">
+
+          <div class="St-number">
+            <h3>शिक्षक</h3>
+            <p>30</p>
+
+        </a>
+
+        
+      </div>
+
+    </div>
+
+    <div class="toperStudent" id="toperStudent">
+      <div class="student">
+
+        <img src="blooddon.png" alt="School img">
+        <p>Nmae :-- Rahul</p>
+        <p>97%</p>
+        <p>Bhaleri</p>
+
+      </div>
+
+      <div class="student">
+
+        <img src="blooddon.png" alt="School img">
+        <p>Nmae :-- Rahul</p>
+        <p>97%</p>
+        <p>Bhaleri</p>
+
+      </div>
+
+      <div class="student">
+
+        <img src="blooddon.png" alt="School img">
+        <p>Nmae :-- Rahul</p>
+        <p>97%</p>
+        <p>Bhaleri</p>
+
+      </div>
+
+    </div>
+    <div class="big-notice">
+
+      <div class="notice">
+        <h3>School % Notice Bold</h3>
+        <p>यह एक सरकारी विद्यालय है जहाँ कक्षा 1 से 12 तक अनुभवी शिक्षक पढ़ाते हैं।
+          विद्यालय का परिणाम 90% से 98% तक रहा है।
+          कई छात्रों ने IIT और NEET परीक्षा पहले प्रयास में उत्तीर्ण की है।
+          यहाँ IT और MI की सुविधाएँ भी उपलब्ध हैं।</p>
+          
+          <a href="aaveden.html">Admission Application</a>
+        </div>
+        
+        <div class="notice">
+          <h3>📢 Notice Board</h3>
+          <ul id="noticeList">
+            <li>छात्र विद्यालय यूनिफॉर्म में समय पर उपस्थित हों।</li>
+            <li>कल प्रार्थना सभा में सभी छात्रों की उपस्थिति अनिवार्य है।</li>
+            <li>जिन छात्रों की फीस शेष है, वे शीघ्र कार्यालय में जमा करें।</li>
+          </ul>
+          
+          <a href="aaveden.html">Admission Application</a>
+        </div>
+      </div>
+
+
+
+    <div class="timetable" id="time">
+      <h3>School Time Table</h3>
+
+      <div class="row">
+        <span>10:00 - 11:00</span>
+
+      </div>
+      <div class="row">
+        <span>11:00 - 12:00</span>
+
+      </div>
+      <div class="row">
+        <span>12:00 - 1:00</span>
+
+      </div>
+
+      <div class="row">
+        <span>1:00 - 2:00 (Lunch Break)</span>
+
+      </div>
+
+      <div class="row">
+        <span>2:00 - 3:00</span>
+
+      </div>
+      <div class="row">
+        <span>3:00 - 4:00</span>
+      </div>
+
+      <a href="timeTable.html">
+        <button>Class Time Table</button>
+      </a>
+
+    </div>
+
+    </div>
+
+
+    <footer>
+      <nav class="footer-Nav">
+        <a href="#">Admission Application</a>
+        <a href="#">Youtube</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagrame</a>
+        <a href="#">WhatsApp</a>
+      </nav>
+    </footer>
+  </main>
+</body>
+
+</html>
